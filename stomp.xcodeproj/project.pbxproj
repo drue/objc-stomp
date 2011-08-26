@@ -1,0 +1,240 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		73647BD314080AFA005D156B /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73647BD214080AFA005D156B /* Foundation.framework */; };
+		73647BE414080B42005D156B /* CRVStompClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 73647BE214080B42005D156B /* CRVStompClient.m */; };
+		73647BE514080B42005D156B /* CRVStompClient.h in Headers */ = {isa = PBXBuildFile; fileRef = 73647BE314080B42005D156B /* CRVStompClient.h */; };
+		73647BEA14080C38005D156B /* AsyncSocket.m in Sources */ = {isa = PBXBuildFile; fileRef = 73647BE814080C38005D156B /* AsyncSocket.m */; };
+		73647BEB14080C38005D156B /* AsyncSocket.h in Headers */ = {isa = PBXBuildFile; fileRef = 73647BE914080C38005D156B /* AsyncSocket.h */; };
+		73647BED14080C77005D156B /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73647BEC14080C77005D156B /* CFNetwork.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		73647BCF14080AFA005D156B /* libstomp.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libstomp.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		73647BD214080AFA005D156B /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		73647BD614080AFA005D156B /* stomp-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "stomp-Prefix.pch"; sourceTree = "<group>"; };
+		73647BE214080B42005D156B /* CRVStompClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CRVStompClient.m; sourceTree = "<group>"; };
+		73647BE314080B42005D156B /* CRVStompClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CRVStompClient.h; sourceTree = "<group>"; };
+		73647BE814080C38005D156B /* AsyncSocket.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AsyncSocket.m; path = cocoaasyncsocket/RunLoop/AsyncSocket.m; sourceTree = "<group>"; };
+		73647BE914080C38005D156B /* AsyncSocket.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AsyncSocket.h; path = cocoaasyncsocket/RunLoop/AsyncSocket.h; sourceTree = "<group>"; };
+		73647BEC14080C77005D156B /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		73647BCC14080AFA005D156B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				73647BED14080C77005D156B /* CFNetwork.framework in Frameworks */,
+				73647BD314080AFA005D156B /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		73647BC414080AFA005D156B = {
+			isa = PBXGroup;
+			children = (
+				73647BEC14080C77005D156B /* CFNetwork.framework */,
+				73647BE714080C24005D156B /* AsyncSocket */,
+				73647BD414080AFA005D156B /* stomp */,
+				73647BD114080AFA005D156B /* Frameworks */,
+				73647BD014080AFA005D156B /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		73647BD014080AFA005D156B /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				73647BCF14080AFA005D156B /* libstomp.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		73647BD114080AFA005D156B /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				73647BD214080AFA005D156B /* Foundation.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		73647BD414080AFA005D156B /* stomp */ = {
+			isa = PBXGroup;
+			children = (
+				73647BE214080B42005D156B /* CRVStompClient.m */,
+				73647BE314080B42005D156B /* CRVStompClient.h */,
+				73647BD514080AFA005D156B /* Supporting Files */,
+			);
+			path = stomp;
+			sourceTree = "<group>";
+		};
+		73647BD514080AFA005D156B /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				73647BD614080AFA005D156B /* stomp-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		73647BE714080C24005D156B /* AsyncSocket */ = {
+			isa = PBXGroup;
+			children = (
+				73647BE814080C38005D156B /* AsyncSocket.m */,
+				73647BE914080C38005D156B /* AsyncSocket.h */,
+			);
+			name = AsyncSocket;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		73647BCD14080AFA005D156B /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				73647BE514080B42005D156B /* CRVStompClient.h in Headers */,
+				73647BEB14080C38005D156B /* AsyncSocket.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		73647BCE14080AFA005D156B /* stomp */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 73647BD914080AFA005D156B /* Build configuration list for PBXNativeTarget "stomp" */;
+			buildPhases = (
+				73647BCB14080AFA005D156B /* Sources */,
+				73647BCC14080AFA005D156B /* Frameworks */,
+				73647BCD14080AFA005D156B /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = stomp;
+			productName = stomp;
+			productReference = 73647BCF14080AFA005D156B /* libstomp.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		73647BC614080AFA005D156B /* Project object */ = {
+			isa = PBXProject;
+			buildConfigurationList = 73647BC914080AFA005D156B /* Build configuration list for PBXProject "stomp" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 73647BC414080AFA005D156B;
+			productRefGroup = 73647BD014080AFA005D156B /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				73647BCE14080AFA005D156B /* stomp */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		73647BCB14080AFA005D156B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				73647BE414080B42005D156B /* CRVStompClient.m in Sources */,
+				73647BEA14080C38005D156B /* AsyncSocket.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		73647BD714080AFA005D156B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = DEBUG;
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvmgcc42;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		73647BD814080AFA005D156B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_VERSION = com.apple.compilers.llvmgcc42;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
+				SDKROOT = iphoneos;
+			};
+			name = Release;
+		};
+		73647BDA14080AFA005D156B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				DSTROOT = /tmp/stomp.dst;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "stomp/stomp-Prefix.pch";
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		73647BDB14080AFA005D156B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				DSTROOT = /tmp/stomp.dst;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "stomp/stomp-Prefix.pch";
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		73647BC914080AFA005D156B /* Build configuration list for PBXProject "stomp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				73647BD714080AFA005D156B /* Debug */,
+				73647BD814080AFA005D156B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		73647BD914080AFA005D156B /* Build configuration list for PBXNativeTarget "stomp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				73647BDA14080AFA005D156B /* Debug */,
+				73647BDB14080AFA005D156B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 73647BC614080AFA005D156B /* Project object */;
+}
