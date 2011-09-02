@@ -1,7 +1,7 @@
 STOMP client for Objective-C
 ============================
 
-This is a simple STOMP client based on [Stefan Saasen's version](http://dev.coravy.com/wiki/display/OpenSource/Stomp+client+for+Objective-C) of an initial implementation (StompService) from Scott Raymond <sco@scottraymond.net> (see [http://gist.github.com/72935](http://gist.github.com/72935))
+This is a simple STOMP client based on [Stefan Saasen's version](https://github.com/juretta/objc-stomp) of an initial implementation (StompService) from Scott Raymond <sco@scottraymond.net> (see [http://gist.github.com/72935](http://gist.github.com/72935))
 * and AsynSocket: [http://code.google.com/p/cocoaasyncsocket/](http://code.google.com/p/cocoaasyncsocket/)
 
 This version differs in that it has been changed to support binary message bodies using the content-length header and an NSData interface.  It no longer supports messages with bodies that do not have a content length header.  The broker I'm using always sends content-length.
@@ -69,8 +69,8 @@ In MyExample.m
 			NSLog(@"stompServiceDidConnect");
 	}
 
-	- (void)stompClient:(CRVStompClient *)stompService messageReceived:(NSString *)body withHeader:(NSDictionary *)messageHeader {
-		NSLog(@"gotMessage body: %@, header: %@", body, messageHeader);
+	- (void)stompClient:(CRVStompClient *)stompService messageReceived:(NSData *)data withHeader:(NSDictionary *)messageHeader {
+		NSLog(@"gotMessage body: %@, header: %@", data, messageHeader);
 		NSLog(@"Message ID: %@", [messageHeader valueForKey:@"message-id"]);
 		// If we have successfully received the message ackknowledge it.
 		[stompService ack: [messageHeader valueForKey:@"message-id"]];
