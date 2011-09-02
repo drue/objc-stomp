@@ -16,7 +16,13 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		73647BCF14080AFA005D156B /* libstomp.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libstomp.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		732BDA24140F51EC008F4A8D /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
+		732BDA27140F51EC008F4A8D /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
+		732BDA28140F51EC008F4A8D /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		732BDA29140F51EC008F4A8D /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		732BDA42140F5C9F008F4A8D /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		732BDA45140F5C9F008F4A8D /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		73647BCF14080AFA005D156B /* libstomp-ios.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libstomp-ios.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		73647BD214080AFA005D156B /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		73647BD614080AFA005D156B /* stomp-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "stomp-Prefix.pch"; sourceTree = "<group>"; };
 		73647BE214080B42005D156B /* CRVStompClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CRVStompClient.m; sourceTree = "<group>"; };
@@ -39,6 +45,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		732BDA26140F51EC008F4A8D /* Other Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				732BDA27140F51EC008F4A8D /* AppKit.framework */,
+				732BDA28140F51EC008F4A8D /* CoreData.framework */,
+				732BDA29140F51EC008F4A8D /* Foundation.framework */,
+			);
+			name = "Other Frameworks";
+			sourceTree = "<group>";
+		};
 		73647BC414080AFA005D156B = {
 			isa = PBXGroup;
 			children = (
@@ -53,7 +69,7 @@
 		73647BD014080AFA005D156B /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				73647BCF14080AFA005D156B /* libstomp.a */,
+				73647BCF14080AFA005D156B /* libstomp-ios.a */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -62,6 +78,10 @@
 			isa = PBXGroup;
 			children = (
 				73647BD214080AFA005D156B /* Foundation.framework */,
+				732BDA24140F51EC008F4A8D /* Cocoa.framework */,
+				732BDA42140F5C9F008F4A8D /* UIKit.framework */,
+				732BDA45140F5C9F008F4A8D /* CoreGraphics.framework */,
+				732BDA26140F51EC008F4A8D /* Other Frameworks */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -108,9 +128,9 @@
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
-		73647BCE14080AFA005D156B /* stomp */ = {
+		73647BCE14080AFA005D156B /* stomp-ios */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 73647BD914080AFA005D156B /* Build configuration list for PBXNativeTarget "stomp" */;
+			buildConfigurationList = 73647BD914080AFA005D156B /* Build configuration list for PBXNativeTarget "stomp-ios" */;
 			buildPhases = (
 				73647BCB14080AFA005D156B /* Sources */,
 				73647BCC14080AFA005D156B /* Frameworks */,
@@ -120,9 +140,9 @@
 			);
 			dependencies = (
 			);
-			name = stomp;
+			name = "stomp-ios";
 			productName = stomp;
-			productReference = 73647BCF14080AFA005D156B /* libstomp.a */;
+			productReference = 73647BCF14080AFA005D156B /* libstomp-ios.a */;
 			productType = "com.apple.product-type.library.static";
 		};
 /* End PBXNativeTarget section */
@@ -142,7 +162,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				73647BCE14080AFA005D156B /* stomp */,
+				73647BCE14080AFA005D156B /* stomp-ios */,
 			);
 		};
 /* End PBXProject section */
@@ -225,7 +245,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		73647BD914080AFA005D156B /* Build configuration list for PBXNativeTarget "stomp" */ = {
+		73647BD914080AFA005D156B /* Build configuration list for PBXNativeTarget "stomp-ios" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				73647BDA14080AFA005D156B /* Debug */,

@@ -25,7 +25,7 @@ typedef enum {
 } CRVStompAckMode;
 
 @protocol CRVStompClientDelegate <NSObject>
-- (void)stompClient:(CRVStompClient *)stompService messageReceived:(NSString *)body withHeader:(NSDictionary *)messageHeader;
+- (void)stompClient:(CRVStompClient *)stompService messageReceived:(NSData *)body withHeader:(NSDictionary *)messageHeader;
 
 @optional
 - (void)stompClientDidDisconnect:(CRVStompClient *)stompService;
@@ -45,9 +45,15 @@ typedef enum {
 	NSString *sessionId;
 	BOOL doAutoconnect;
 	BOOL anonymous;
+    BOOL inHeaders;
+    
+    NSMutableDictionary *curHeaders; // headers for in-process message
+    NSString *curCommand; // command of in-process message
 }
 
 @property (nonatomic, assign) id<CRVStompClientDelegate> delegate;
+@property (nonatomic, retain) NSMutableDictionary *curHeaders;
+@property (nonatomic, retain) NSString *curCommand;
 
 - (id)initWithHost:(NSString *)theHost 
 			  port:(NSUInteger)thePort 
@@ -72,6 +78,9 @@ typedef enum {
 
 - (void)connect;
 - (void)sendMessage:(NSString *)theMessage toDestination:(NSString *)destination;
+- (void)sendMessage:(NSString *)theMessage toDestination:(NSString *)destination withHeader:(NSDictionary *)header;
+- (void)sendData:(NSData *)theMessage toDestination:(NSString *)destination;
+- (void)sendData:(NSData *)theMessage toDestination:(NSString *)destination withHeader:(NSDictionary *)header;
 - (void)subscribeToDestination:(NSString *)destination;
 - (void)subscribeToDestination:(NSString *)destination withAck:(CRVStompAckMode) ackMode;
 - (void)subscribeToDestination:(NSString *)destination withHeader:(NSDictionary *) header;
