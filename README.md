@@ -1,11 +1,12 @@
 STOMP client for Objective-C
 ============================
 
-This is a simple STOMP client based on
-
-* an initial implementation (StompService) from Scott Raymond <sco@scottraymond.net> (see [http://gist.github.com/72935](http://gist.github.com/72935))
+This is a simple STOMP client based on [Stefan Saasen's version](http://dev.coravy.com/wiki/display/OpenSource/Stomp+client+for+Objective-C) of an initial implementation (StompService) from Scott Raymond <sco@scottraymond.net> (see [http://gist.github.com/72935](http://gist.github.com/72935))
 * and AsynSocket: [http://code.google.com/p/cocoaasyncsocket/](http://code.google.com/p/cocoaasyncsocket/)
 
+This version differs in that it has been changed to support binary message bodies using the content-length header and an NSData interface.  It no longer supports messages with bodies that do not have a content length header.  The broker I'm using always sends content-length.
+
+This repo also has an Xcode project with an ios static lib target, plus cocoasyncsocket as a git submodule.
 
 Documentation
 -------------
